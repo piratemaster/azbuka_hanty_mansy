@@ -15,5 +15,6 @@
             android:columnWidth="25dp"
             android:stretchMode="columnWidth"
             android:horizontalSpacing="5dp"
-            android:overScrollMode="ifContentScrolls" android:isScrollContainer="true" android:id="@+id/gridWiew"/>
+            android:overScrollMode="ifContentScrolls" android:isScrollContainer="true" android:id="@+id/gridWiew"
+            tools:ignore="MissingConstraints"/>
 </android.support.constraint.ConstraintLayout>
