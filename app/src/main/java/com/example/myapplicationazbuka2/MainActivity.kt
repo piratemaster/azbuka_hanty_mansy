@@ -84,16 +84,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private val letterClass = AdapterClass()
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        val letter = findViewById<View>(R.id.gridWiew) as GridView
+        val letter_grid = findViewById<View>(R.id.gridWiew) as GridView
         when (item.itemId) {
 //
             R.id.nav_alphabet_m -> {
 
-                letterClass.abc(letm, applicationContext, letter, "m")
+                letterClass.abc(letm, applicationContext, letter_grid, "m")
 
             }
             R.id.nav_alphabet_h -> {
-                letterClass.abc(leth, applicationContext, letter, "h")
+                letterClass.abc(leth, applicationContext, letter_grid, "h")
             }
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
