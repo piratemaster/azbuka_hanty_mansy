@@ -7,6 +7,7 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:showIn="@layout/app_bar_main"
+        android:orientation="vertical"
         tools:context=".MainActivity" android:id="@+id/layout1">
     <GridView
             android:layout_width="395dp"
@@ -15,6 +16,7 @@
             android:columnWidth="25dp"
             android:stretchMode="columnWidth"
             android:horizontalSpacing="5dp"
+
             android:overScrollMode="ifContentScrolls" android:isScrollContainer="true" android:id="@+id/gridWiew"
-            tools:ignore="MissingConstraints"/>
+            tools:ignore="MissingConstraints" tools:targetApi="o"/>
 </android.support.constraint.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.myapplicationazbuka2
 
+import android.content.Context
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
@@ -20,6 +21,9 @@ import kotlinx.android.synthetic.main.content_main.*
 import android.widget.GridView
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
+
+
 
 
 
@@ -28,19 +32,25 @@ import android.widget.ArrayAdapter
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     val letm: Array<String> = arrayOf(
-        "А","А̄","Б","В","Г","Д","Е","Ē","Ё","Ё̄","Ж","З","И","Ӣ","Й","К","Л","М",
-        "Н","ӈ","О","Ō","П","Р","С","Т","У","Ӯ","Ф","Х","Ц","Ч","Ш","Щ","Ъ","Ы","Ы̄",
-        "Ь","Э","Э","Ю","Ю̄","Я","Я̄"
+        "А","Ā","Б","В","Г","Д","Е","Ē","Ё","\uF512","Ж","З","И","Ӣ","Й","К","Л","М",
+        "Н","ӈ","О","Ō","П","Р","С","Т","У","Ӯ","Ф","Х","Ц","Ч","Ш","Щ","Ъ","Ы","\uF520",
+        "Ь","Э","\uF522","Ю","\uF52C","Я","\uF528"
     )
     val leth: Array<String> = arrayOf(
-        "А","Ӑ","В","И","Й","К","Л","Ԓ","Љ","М","Н",
-        "Њ","ӈ","О","Ө","П","Р","С","Т","Ѣ","У","Ў","Х","Ш","Щ","Ы","Э","Є","Ə"
+        "А","Ӑ","В","И","Й","К","Л","Ԓ","М","Н",
+        "ӈ","О","Ө","П","Р","С","Т","У","Ў","Х",
+        "Ш","Щ","Ы", "Ь","Э","Є", "\uF526", "Ю", "Я", "Ə"
     )
 
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
+
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)

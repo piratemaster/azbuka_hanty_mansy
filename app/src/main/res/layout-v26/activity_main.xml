@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         android:orientation="vertical"
-        tools:openDrawer="start" tools:targetApi="o">
+        tools:openDrawer="start">
 
 
     <include

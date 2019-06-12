@@ -1,0 +1,3 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('calligraphy-2.3.0.aar'))
+

@@ -3,14 +3,4 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              tools:context=".LetterLayoutClass">
-
-    <GridView
-            android:id="@+id/grid_view_image_text"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:columnWidth="110dp"
-            android:gravity="center"
-            android:numColumns="auto_fit" />
-
-</LinearLayout>
+              tools:context=".LetterLayoutClass" android:baselineAligned="false" android:orientation="vertical"/>
